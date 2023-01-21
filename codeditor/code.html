@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leo</title>
+    <link rel="stylesheet" href="co.css">
+</head>
+<body>
+    <div class="container">
+        <h1>LeoEditor</h1>
+        <div class="right">
+            <label id="r1">Output :-</label>
+            <iframe id="output"></iframe>
+        </div>
+        <div class="left">
+            <div class="first">
+            <label>CSS</label>
+            <textarea id="css-code" onkeyup="run()" cols="30" rows="10"></textarea>
+            </div>
+            <div class="mid">
+            <label>HTML</label>
+            <textarea id="html-code" onkeyup="run()" cols="30" rows="10"></textarea>
+            </div>
+            <div class="last">
+            <label><i class="fa-brands fa-square-js"></i>JavaScript</label>
+            <textarea id="JavaScript-code" onkeyup="run()" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function run(){
+            // .value use to store val thts inside html/css
+            let htmlCode= document.getElementById("html-code").value
+            let cssCode= document.getElementById("css-code").value
+            let jsCode= document.getElementById("JavaScript-code").value
+            let output= document.getElementById("output")
+
+            //iframe creates another html to access tht--
+            output.contentDocument.body.innerHTML= 
+            htmlCode+ "<style>" +cssCode+ "</style>"
+        
+            output.contentWindow.eval(jsCode)
+        }
+    </script>
+</body>
+</html>

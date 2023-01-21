@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: #393838;
+    color: #fff;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+h1{
+    position: absolute;
+    margin-left: 2rem;
+    color:#8869fb ;
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-top: -1rem;
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+    margin-top: 1.4rem;
+}
+
+#r1{
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+#output{
+    width: 90%;
+    height: 380px;
+    background: #fff;
+    outline: 0;
+    border: 0;
+    border-radius: 2rem;
+}
+
+.left{
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: -3.5rem;
+}
+
+label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #9b81f6;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+}
+
+textarea{
+    width: 380px;
+    height: 58%;
+    background: #827b7b;
+    color:antiquewhite;
+    padding: 10px 20px;
+    border: 0;
+    outline: 0;
+    font-size: 18px;
+    border-radius: 1.4rem;
+    resize: none;
+    transition: .5s;
+}
+
+textarea:hover{
+    background-color: rgb(97, 85, 85);
+}
+
+.mid{
+    margin-top: -2.5rem;
+}
